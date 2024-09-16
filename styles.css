@@ -1,0 +1,440 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body.dark-mode {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+.dark-mode .about-section
+{
+    background-color: rgba(0, 123, 255, 0.294);
+}
+
+/* Navbar */
+.navbar {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: relative;
+}
+.navbar .logo img {
+    width: 60px;
+}
+.navbar h1 {
+    margin-left: 10px;
+    color: #fff;
+}
+.navbar .menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+.navbar .menu ul li {
+    margin-right: 20px;
+}
+.navbar .menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.navbar .menu ul li a:hover {
+    color: #ffc107;
+}
+.toggle-theme-btn {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+body.dark-mode .toggle-theme-btn {
+    color: #f39c12;
+}
+/* إخفاء القائمة المنسدلة في الوضع الافتراضي */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        position: relative;
+    }
+
+
+    /* إظهار زر القائمة المنسدلة */
+    .menu-toggle {
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    }
+
+    /* تعديل القائمة لتصبح منسدلة من اليمين */
+    .menu ul {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #007BFF;
+        width: 200px;
+        flex-direction: column;
+        display: none; /* إخفاء القائمة في الوضع الافتراضي */
+        padding: 0;
+    }
+
+    .menu ul li {
+        margin: 10px;
+    }
+
+    .menu ul li a {
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-align: right; /* محاذاة العناصر لليمين */
+    }
+
+    .menu ul li a:hover {
+        background-color: #ffc107;
+    }
+
+    /* عرض القائمة عند فتحها */
+    .menu.show ul {
+        display: flex;
+    }
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 700px;
+    text-align: center;
+    color: #fff;
+    background-image: url('./assets/backgrounds/foodsBg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero-overlay {
+    background-color: rgba(0, 123, 255, 0.294);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.hero-text {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;
+}
+.hero-text h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* Menu Section */
+.menu-categories {
+    padding: 50px 20px;
+    text-align: center;
+}
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.menu-category {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+.menu-category img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.prev-slide, .next-slide {
+   
+    color: #1a1818;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 10px;
+    border-radius: 50%;
+}
+.prev-slide {
+    left: 10px;
+}
+.next-slide {
+    right: 10px;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #007BFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.447);
+}
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.about-text {
+    max-width: 500px;
+}
+.about-images {
+    display: flex;
+    gap: 20px;
+}
+.about-images img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 50px 20px;
+    text-align: center;
+
+ 
+}
+.testimonials-slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;;
+}
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    min-width: 100%;
+}
+.testimonial {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+    
+}
+.testimonial.active {
+    opacity: 1;
+   
+}
+.prev-slide-testimonial, .next-slide-testimonial {
+    color: #1a1818;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 0 10px;
+    border-radius: 50%;
+}
+.prev-slide-testimonial {
+    left: 10px;
+}
+.next-slide-testimonial {
+    right: 10px;
+}
+
+/* Reservation Form */
+.reservation-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+    background: rgba(0, 0, 0, 0.596);
+    width: 100%;
+    padding: 10px;
+}
+.reservation-form {
+    background: rgba(255, 255, 255, 0.293);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.447);
+    width: 400px;
+    backdrop-filter: blur(10px);
+    
+}
+.reservation-form input,
+.reservation-form select {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    justify-content: center;
+}
+.reservation-form h2 
+{
+color:#ddd;
+}
+.reservation-form button.submit-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.reservation-form button.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer-section {
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.scroll-top-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.scroll-top-btn:hover {
+    background-color: #0056b3;
+}
+.social-icons 
+{
+    font-size: 25px;
+}
+/* Media Queries for Small Screens (Mobile Devices) */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .navbar h1 {
+        margin-left: 0;
+    }
+    .navbar .menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    .navbar .menu ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .hero-text h2 {
+        font-size: 2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .menu-category img {
+        width: 80%;
+    }
+    .about-content {
+        flex-direction: column;
+    }
+    .about-images {
+        flex-direction: column;
+    }
+    .reservation-form {
+        width: 90%;
+    }
+    .footer-section {
+        padding: 10px;
+    }
+    .scroll-top-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Media Queries for Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    .hero-text h2 {
+        font-size: 2.2em;
+    }
+    .hero-text p {
+        font-size: 1.1em;
+    }
+    .menu-category img {
+        width: 60%;
+    }
+    .about-images {
+        flex-direction: row;
+        gap: 10px;
+    }
+    .reservation-form {
+        width: 80%;
+    }
+    .scroll-top-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+}
+
+/* Media Queries for Large Screens (Desktops) */
+@media (min-width: 1025px) {
+    .hero-section {
+        height: 800px;
+    }
+    .menu-category img {
+        width: 50%;
+    }
+    .about-images img {
+        width: 180px;
+    }
+    .reservation-form {
+        width: 400px;
+    }
+    .scroll-top-btn {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}

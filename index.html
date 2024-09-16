@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueWave Diner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <button class="menu-toggle" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            
+            <h1>BlueWave Diner</h1>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="toggle-theme-btn" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-text">
+            <h2>The Best Italian Food at the Right Price</h2>
+            <p>We provide top-notch Italian dishes crafted with love and care.</p>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-categories">
+        <h2>Italian Cuisine Specialties</h2>
+        <div class="slider-container">
+            <button class="prev-slide">❮</button>
+            <div class="slider">
+                <div class="menu-category">
+                    <h3>Pizza Margherita</h3>
+                    <p>A classic Italian pizza made with fresh mozzarella, tomatoes, and basil.</p>
+                    <img src="./assets/fastfood/pexels-dogukan-melik-sevindik-1121476372-27650917.jpg" alt="Pizza Margherita">
+                </div>
+                <div class="menu-category">
+                    <h3>Spaghetti Carbonara</h3>
+                    <p>Delicious spaghetti with eggs, cheese, pancetta, and pepper.</p>
+                    <img src="./assets/fastfood/pexels-polina-tankilevitch-4518844.jpg" alt="Spaghetti Carbonara">
+                </div>
+                <div class="menu-category">
+                    <h3>Lasagna</h3>
+                    <p>Layered pasta with rich meat sauce, cheese, and bechamel.</p>
+                    <img src="./assets/fastfood/pexels-ioan-bilac-8334169-6046493.jpg" alt="Lasagna">
+                </div>
+            </div>
+            <button class="next-slide">❯</button>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>At BlueWave Diner, we pride ourselves on offering the finest Italian cuisine with a focus on fresh, high-quality ingredients. Our chefs are dedicated to bringing you authentic flavors and an unforgettable dining experience.</p>
+            </div>
+            <div class="about-images">
+                <img src="./assets/drink1.jpg" alt="About Image 1">
+                <img src="./assets/drink2.jpg" alt="About Image 2">
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>What our customers say</h2>
+        <div class="testimonials-slider">
+            <button class="prev-slide-testimonial">❮</button>
+            <div class="slider">
+                <div class="testimonial active">
+                    <h3>George Richard</h3>
+                    <p>"The Italian food is amazing! I absolutely love their pizza and lasagna."</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Amy Poland</h3>
+                    <p>"BlueWave Diner offers authentic Italian cuisine. Highly recommended!"</p>
+                </div>
+                <div class="testimonial">
+                    <h3>James Michaels</h3>
+                    <p>"I've tried many Italian restaurants, but BlueWave stands out. Excellent service, fantastic food!"</p>
+                </div>
+            </div>
+            <button class="next-slide-testimonial">❯</button>
+        </div>
+    </section>
+
+    <section class="reservation-form-container">
+        <div class="reservation-form">
+            <h2>Book a Table</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="date" placeholder="Date" required>
+                <input type="time" placeholder="Time" required>
+                <select required>
+                    <option value="">Number of People</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <button type="submit" class="submit-btn">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Stay in touch with us for the latest updates on our menu and special offers.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa fab fa-facebook"></i></a>
+            <a href="#"><i class="fa fab fa-instagram"></i></a>
+            <a href="#"><i class="fa fab fa-whatsapp"></i></a>
+        </div>
+        <button class="scroll-top-btn" id="backToTop">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </footer>
+</body>
+
+</html>
